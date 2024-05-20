@@ -28,7 +28,7 @@ app.use(session({
     mongoUrl: process.env.MONGODB_URI
   }),
 }));
-app.use(express.static(__dirname+'public'));
+app.use(express.static(__dirname+'/public'));
 
 //templating engine
 app.use(expressLayout);
