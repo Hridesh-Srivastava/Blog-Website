@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+</head>
+<body>
+  <style>
+    #searchClose{
+      background-color: rgb(211, 205, 205);
+      border-radius: 10px;
+      border:3px solid rgb(45, 44, 44);
+      overflow-y: hidden;
+      height:50px;
+      margin-top: 2px;
+      margin-right: auto;
+      width:100px;
+      transition: width .4s ease-out .3s;
+    }
+    #searchClose:hover{
+      font-weight: bold;
+      color: black;
+      width:140px;
+    }
+    #searchInput{
+      border-radius: 50px solid black;
+      border:none;
+      background: rgb(209, 201, 201);
+    }
+    
+   
+  </style>
+</body>
+</html>
+
+
+
+<div class="searchBar">
+    <div class="container">
+      <form action="/search" method="POST" class="search__form" role="search">
+        <input 
+          type="search"
+          aria-label="Search"
+          id="searchInput"
+          name="searchTerm"
+          placeholder="Search for blogs..."
+        />
+      </form>
+      <div style="color:black;" id="searchClose">Back→</div>
+    </div>
+  </div>

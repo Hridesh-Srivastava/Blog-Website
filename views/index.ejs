@@ -1,0 +1,75 @@
+
+<div class="author">
+    <h1 class="author__heading">Create a blog.</h1>
+    <p class="author__body">Create a unique blog easily.</p>
+  </div>
+  <hr>
+  <br>
+  <div class="container1">
+    <div class="card">
+      <img src="/img/person-front-computer-working-html-1.jpg" alt="person looking on laptop" class="hero-image" width="981" height="528">
+      <div class="content">
+        <h2 class="hex">Welcome to blOgWise</h2><br>
+        <b class="cont"> Dive into a world of captivating narratives, insightful discussions, and thought-provoking content. Step into the realm of ideas and inspiration. Our blog site is your gateway to a treasure trove of knowledge, stories, and perspectives.
+
+         Also, here we curate a collection of articles and insights on a variety of topics. Whether you're interested in exploring new ideas, learning something new, or simply indulging in captivating narratives, you'll find something to pique your interest. Our goal is to provide a platform for thought-provoking discussions and meaningful content that resonates with our readers. So, take a moment to browse through our posts, and we hope you enjoy your time exploring our blog!</b> </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <hr>
+  <br>
+  <br>
+  <br>
+  <div class="container2">
+    <div class="card2">
+ <img src="/img/photo-1544006659-f0b21884ce1d.avif" alt="working on computer" class="working" width="981" height="528">
+ <div class="content2">
+  <h2 class="hex2"></h2><br>
+  <b class="cont2">Also we have:<br>
+   • Interactive Engagement: Join the conversation! We love hearing from our readers. Share your thoughts, leave comments, and engage with fellow community members to foster meaningful discussions.
+   <br>
+   • Diverse Content: From heartfelt personal narratives to informative articles and thought-provoking opinion pieces, our blog covers a wide range of topics to cater to every interest and curiosity.
+  <br>
+  • Fresh Updates: Stay tuned! We're constantly updating our blog with new content to keep you inspired and informed. There's always something new to discover every time you visit.
+  <br>
+  • User-Friendly Design: Navigate with ease! Our blog features a user-friendly design and intuitive layout, ensuring a seamless browsing experience for our readers.
+    <br>
+  </b> </div>
+</div>
+</div>
+<br>
+<br>
+<hr>
+  <section class="articles">
+    <h2 class="articles__heading">Latest Posts</h2>
+  
+    <ul class="article-ul">
+ 
+        <% data.forEach(post => { %>
+        <li>
+          <a href="/post/<%= post._id %>">
+            <span><%= post.title %></span>
+            <span class="article-list__date"><%= post.createdAt.toDateString() %></span>
+          </a>
+        </li>
+ <% }) %>
+
+
+    </ul>
+  
+  
+    <% if (nextPage !==null) { %>
+      <a href="/?page=<%= nextPage %>" class="pagination">&lt; View Older Posts</a>
+    <% } %>
+     
+     
+ 
+   
+  
+    
+  
+  
+  
+  </section>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+</head>
+<body>
+  <style>
+    .btn{
+      background-color: rgb(44, 43, 43);
+           
+            box-shadow: 0px 0px 8px rgb(43, 41, 41);
+    }
+    .btn:hover{
+      background-color: rgb(9, 132, 9);
+        opacity: .9;
+    }
+    #hes:hover{
+      font-weight: bold;
+      color:black;
+    }
+  </style>
+</body>
+</html>
+<a  id="hes" style="text-decoration:none;"href="/dashboard">&larr; Back</a>
+<div class="admin-title">
+  <h2>Add New Post</h2>
+</div>
+<br>
+<form action="/add-post" method="POST">
+
+  <label for="title"><b style="margin-left:5px;">Title</b></label>
+<br>
+
+  <input style="border-radius:20px; box-shadow:0px 2px 5px rgb(37, 36, 36) !important;" type="text" placeholder="Post Title" name="title">
+<br>
+  <label for="body"><b style="margin-left:5px;">Content</b></label>
+  <br>
+  <textarea style="border-radius:20px; box-shadow:0px 2px 5px rgb(37, 36, 36) !important;" placeholder="Your content..." name="body" cols="50" rows="10"></textarea>
+
+  <input type="submit" value="Add" class="btn">
+
+</form>

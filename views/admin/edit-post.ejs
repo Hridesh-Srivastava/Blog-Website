@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+</head>
+<body>
+  <style>
+    input[type="submit"]:hover{
+      opacity:.7;
+      background-color: red;
+      color:whitesmoke;
+    }
+    .andFix{
+      text-decoration: none;
+    }
+    .andFix:hover{
+      font-weight: bold;
+      color: black;
+    }
+    #go{
+      background-color: rgb(48, 48, 48);
+    }
+    #go:hover{
+      background-color: rgb(2, 145, 2);
+    }
+  </style>
+</body>
+</html>
+
+
+<a class="andFix" href="/dashboard">&larr; Go previous</a>
+<br>
+<br>
+<div class="admin-title">
+  <h2>Edit your post</h2>
+<hr>
+<br>
+<br>
+<br>
+  <form action="/delete-post/<%= data._id %>?_method=DELETE" method="POST">
+    <input type="submit" value="Delete this post" class="btn-delete btn">
+  </form>
+
+</div>
+
+<form action="/edit-post/<%= data._id %>?_method=PUT" method="POST">
+
+  <label for="title"><b>Post title</b></label>
+  <input style="border-radius:20px; box-shadow:0px 0px 7px black !important;" type="text" placeholder="Post Title" name="title" value="<%= data.title %>">
+<br>
+  <label for="body"><b>Post content</b></label>
+  <textarea style="border-radius:20px; box-shadow:0px 0px 7px black !important;" placeholder="Post your content..." name="body" cols="50" rows="10"><%= data.body %></textarea>
+<br>
+  <input style="border-radius:10px; box-shadow:0px 0px 8px black !important;" type="submit" value="Modify" class="btn" id="go">
+
+</form>

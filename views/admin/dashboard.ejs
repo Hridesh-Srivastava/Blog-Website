@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+</head>
+<body>
+  <style>
+    .admin-title .button:hover{
+      color: rgb(0, 0, 0);
+      font-weight: bold;
+    }
+ ul li .postOn:hover{
+    text-decoration: underline !important;
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+   }
+   .admin-post-controls .btn:hover{
+      opacity: .5;
+   }
+  
+   
+   input.btn-delete:hover{
+    color:rgb(249, 248, 248);
+   
+    background-color: rgb(255, 3, 3) !important;
+    opacity: 0.7 !important;
+   }
+  </style>
+</body>
+</html>
+<div class="admin-title">
+    <h2>All posts</h2>
+    <a style="text-decoration: none;" href="/add-post" class="button">+ Add new post</a>
+  </div>
+  
+  <ul class="admin-posts">
+  
+    <% data.forEach(post => { %>
+     
+      <li>
+        <a class="postOn" style="text-decoration: none;" href="/post/<%= post._id %>">
+          <%= post.title %> &rarr;
+        </a>
+        <div class="admin-post-controls">
+          <a style="font-weight:bold;color:black;background-color:rgb(170, 164, 164);border:2px solid black;" href="/edit-post/<%= post._id %>" class="btn">Edit post</a>
+  
+          <form action="/delete-post/<%= post._id %>?_method=DELETE" method="POST">
+            <input style="border:2px solid black; background-color:rgb(170, 164, 164);font-weight:bold;color:black;" type="submit" value="Delete post" class="btn-delete btn">
+          </form>
+  
+        </div>
+  
+      </li>
+  
+    <% }) %>
+  </ul>

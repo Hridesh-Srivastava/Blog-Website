@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <style>
+        input[type="submit"]{
+           background-color: rgb(44, 43, 43);
+           
+            box-shadow: 0px 0px 8px rgb(43, 41, 41);
+        }
+        input[type="submit"]:hover{
+        background-color: rgb(9, 132, 9);
+        opacity: .9;
+        }
+
+    </style>
+</body>
+</html>
+
+<h3 style="margin-left:9px;">Log In</h3>
+<br>
+<form action="/admin" method="POST">
+
+    <label for="username"></label>
+    <input  style="border-radius:20px; box-shadow:0px 2px 5px rgb(35, 34, 34) !important;" type="text" placeholder="Enter username or email..." name="username">
+    <label for="password"></label>
+    <input  style="border-radius:20px; box-shadow:0px 2px 5px rgb(37, 36, 36) !important;" type="text" placeholder="Enter password..." name="password">
+
+    <input type="submit" value="Next→" class="btn">
+</form>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<br>
+<br>
+<br>
+<br>
+<h3 style="margin-left:9px;">Registration</h3>
+<br>
+<form action="/register" method="POST">
+
+    <label for="username"></label>
+    <input style="border-radius:20px; box-shadow:0px 2px 5px rgb(35, 34, 34) !important;" type="text" placeholder="Enter username or email..." name="username">
+    <label for="age"></label>
+    <input  style="border-radius:20px; box-shadow:0px 2px 5px rgb(37, 36, 36) !important;" type="text" placeholder="Enter age..." name="age">
+ 
+    <label>
+        <input type="radio" name="gender" value="male" required /><a style="margin-left:5px;">Male</a>
+    </label>
+    <label>
+        <input type="radio" name="gender" value="female" required /><a style="margin-left:5px;">Female</a>
+    </label>
+    <br>
+    <br>
+    <label for="password"></label>
+    <input  style="border-radius:20px; box-shadow:0px 2px 5px rgb(35, 35, 35) !important;" type="text" placeholder="Enter password..." name="password">
+    <label>
+        <label for="confirmPassword"></label>
+        <input  style="border-radius:20px; box-shadow:0px 2px 5px rgb(35, 35, 35) !important;" type="text" placeholder="Confirm password..." name="confirmPassword">
+        <label>
+            <br>
+        <input type="checkbox" required /><a style="margin-left:10px">I have read all the terms and conditions.</a>
+    </label> <br><br>
+    <input type="submit" value="Create Account" class="btn">
+</form>

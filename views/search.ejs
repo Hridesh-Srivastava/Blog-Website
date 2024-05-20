@@ -1,0 +1,20 @@
+<div class="author">
+    <h1 style="text-shadow:0px 0px 5px rgb(78, 76, 76);" class="author__heading">Here are the results:</h1>
+</div>
+
+<section class="articles">
+
+    <ul class="article-ul">
+ 
+        <% data.forEach(post => { %>
+        <li>
+          <a href="/post/<%= post._id %>">
+            <span><%= post.title %></span>
+            <span class="article-list__date"><%= post.createdAt.toDateString() %></span>
+          </a>
+        </li>
+ <% }) %>
+
+
+    </ul>
+</section>
