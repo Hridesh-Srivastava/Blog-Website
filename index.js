@@ -32,6 +32,7 @@ app.use(express.static('public'));
 
 //templating engine
 app.use(expressLayout);
+app.set('views', './views');
 app.set('layout','./layouts/main');
 app.set('view engine','ejs');
 
