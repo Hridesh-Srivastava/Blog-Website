@@ -232,6 +232,7 @@ router.post('/register', async (req, res) => {
       if(error.code === 11000) {
         res.status(409).json({ message: 'User already in use'});
       }
+      console.log(error.message)
       res.status(500).json({ message: 'Internal server error'})
     }
 
